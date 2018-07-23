@@ -1,0 +1,66 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package DeepCloning;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:12:11:08 pm
+ *DATE:14-Nov-2017
+ *TAGS:
+ */
+public class deppCloning implements Cloneable{
+	private int id;
+	private String name;
+	private hobbey hobby;
+
+	static hobbey dm=new hobbey("cricket");
+	 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	
+	/**
+	 * @param id
+	 * @param name
+	 * @param hobby
+	 */
+	public deppCloning(int id, String name, hobbey hobby) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.hobby = hobby;
+	} 
+  /* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "deppCloning [id=" + id + ", name=" + name + ", hobby=" + hobby + "]";
+	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#clone()
+	 */
+	@Override
+	public deppCloning clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		deppCloning d=(deppCloning) super.clone();
+		d.dm=this.dm.clone();
+		return d;
+	}
+public static void main(String[] args) throws CloneNotSupportedException {
+	
+	deppCloning d=new deppCloning(1, "irfan", dm);
+	deppCloning e=(deppCloning) d.clone();
+	/*
+	 * print the data
+	 */
+	System.out.println(d);
+	System.out.println(e);
+	/*
+	 * comparing the object for deep cloning
+	 */
+	System.out.println(d.hobby.hashCode());
+	System.out.println(e.hobby.hashCode());
+}
+}

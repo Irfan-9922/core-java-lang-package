@@ -1,0 +1,24 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package Clone;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:11:53:47 am
+ *DATE:14-Nov-2017
+ *TAGS:
+ */
+public class Adress {
+	private String add;
+
+	/**
+	 * @param add
+	 */
+	public Adress(String add) {
+		super();
+		this.add = add;
+	}
+
+}

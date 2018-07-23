@@ -1,0 +1,32 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package com.ij;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:10:48:27 am
+ *DATE:14-Nov-2017
+ *TAGS:
+ */
+public class EqualsMethod {
+	private String name;
+	private int id;
+	/**
+	 * @param name
+	 * @param id
+	 */
+	public EqualsMethod(String name, int id) {
+		super();
+		this.name = name;
+		this.id = id;
+	}
+	
+	public static void main(String[] args) {
+		EqualsMethod m=new EqualsMethod("irfan", 1);
+		EqualsMethod m1=new EqualsMethod("irfan", 1);
+		System.out.println(m1.equals(m));
+	}
+
+}

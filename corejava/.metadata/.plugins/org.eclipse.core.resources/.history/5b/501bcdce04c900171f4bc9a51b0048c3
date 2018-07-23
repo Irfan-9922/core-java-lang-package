@@ -1,0 +1,55 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package Clone;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:11:47:18 am
+ *DATE:14-Nov-2017
+ *TAGS:
+ */
+public class CloneExample implements Cloneable{
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "CloneExample [id=" + id + ", name=" + name + ", a=" + a + "]";
+	}
+	private int id;
+	private String name;
+	private Adress a;
+	/**
+	 * @param id
+	 * @param name
+	 * @param a
+	 */
+	public CloneExample(int id, String name, Adress a) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.a = a;
+	}
+	/**
+	 * @param id
+	 * @param name
+	 */
+	public CloneExample(int id, String name) {
+	
+		this.id = id;
+		this.name = name;
+	}
+	public static void main(String[] args) throws CloneNotSupportedException {
+		Adress s=new Adress("latur");
+	//	CloneExample e=new CloneExample(1, "irfan");
+		CloneExample ee=new CloneExample(2, "nisar", s);
+	//	CloneExample e1=(CloneExample) e.clone();
+		//System.out.println(e);
+		System.out.println(s);
+	}
+	
+	
+
+}

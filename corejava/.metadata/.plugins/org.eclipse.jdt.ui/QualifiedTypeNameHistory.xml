@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.ij.EqualsMethod"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="Clone.CloneExample"/>
+<fullyQualifiedTypeName name="Clone.Adress"/>
+<fullyQualifiedTypeName name="Sallow_Clone.Adress"/>
+<fullyQualifiedTypeName name="Sallow_Clone.CloneExample"/>
+<fullyQualifiedTypeName name="java.lang.Cloneable"/>
+<fullyQualifiedTypeName name="DeepCloning.adress"/>
+<fullyQualifiedTypeName name="DeepCloning.student"/>
+<fullyQualifiedTypeName name="DeepCloning.hobbey"/>
+<fullyQualifiedTypeName name="DeepCloning.deppCloning"/>
+</qualifiedTypeNameHistroy>

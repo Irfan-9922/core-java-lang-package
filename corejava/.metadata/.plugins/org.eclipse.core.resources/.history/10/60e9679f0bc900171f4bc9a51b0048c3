@@ -1,0 +1,43 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package DeepCloning;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:12:38:28 pm
+ *DATE:14-Nov-2017
+ *TAGS:
+ */
+public class student implements Cloneable{
+	int no=12;
+	String name="irfan";
+	
+    adress a=new  adress();
+    /* (non-Javadoc)
+     * @see java.lang.Object#clone()
+     */
+    
+    @Override
+    public  student clone() throws CloneNotSupportedException {
+    	// TODO Auto-generated method stub
+    	student s= (student) super.clone();
+    	s.a=this.a.clone();
+    	return s;
+    }
+    /* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "student [no=" + no + ", name=" + name + ", a=" + a + "]";
+	}
+	public static void main(String[] args) throws CloneNotSupportedException {
+		student s=new student();
+		student c=s.clone();
+		System.out.println(s);
+		System.out.println(c);
+		
+	}
+}

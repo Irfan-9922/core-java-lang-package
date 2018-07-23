@@ -1,0 +1,51 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package DeepCloning;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:12:11:08 pm
+ *DATE:14-Nov-2017
+ *TAGS:
+ */
+public class deppCloning implements Cloneable{
+	private int id;
+	private String name;
+	static hobbey h= new hobbey();
+	
+
+	
+/**
+	 * @param id
+	 * @param name
+	 * @param h
+	 */
+	public deppCloning(int id, String name, hobbey h) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.h = h;
+	}
+
+/* (non-Javadoc)
+ * @see java.lang.Object#clone()
+ */
+@Override
+public  deppCloning clone() throws CloneNotSupportedException {
+	// TODO Auto-generated method stub
+	deppCloning d= (deppCloning) super.clone();
+	d.h=this.h.clone();
+	return d;
+}
+
+public static void main(String[] args) throws CloneNotSupportedException {
+	deppCloning d= new deppCloning(1, "irfan", h);
+	deppCloning d1=d.clone();
+	System.out.println(d);
+	System.out.println(d1);
+	
+	
+}
+}

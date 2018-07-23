@@ -1,0 +1,48 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package com.ij;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:10:48:27 am
+ *DATE:14-Nov-2017
+ *TAGS:
+ */
+public class EqualsMethod {
+	private String name;
+	private int id;
+	/**
+	 * @param name
+	 * @param id
+	 */
+	public EqualsMethod(String name, int id) {
+		super();
+		this.name = name;
+		this.id = id;
+	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if(this==obj){
+			return true;
+		}
+		else{
+			if(obj instanceof EqualsMethod){
+				EqualsMethod s=(EqualsMethod) obj;
+				return  this.name.equals(s.name) && this .id==s.id;
+			}
+		}
+		return false;
+	}
+	
+	public static void main(String[] args) {
+		EqualsMethod m=new EqualsMethod("irfan", 1);
+		EqualsMethod m1=new EqualsMethod("irfan", 2);
+		System.out.println(m1.equals(m));
+	}
+
+}
